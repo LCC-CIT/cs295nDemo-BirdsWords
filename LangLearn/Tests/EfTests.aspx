@@ -15,7 +15,7 @@
     </p>
     <p>
         A Spanish Word&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; English Words<br />
-&nbsp;<asp:TextBox ID="SpanishWordTextBox" runat="server" TextMode="MultiLine" Rows="10"></asp:TextBox> &nbsp;&nbsp;&nbsp;
+&nbsp;<asp:TextBox ID="SpanishWordTextBox" runat="server"></asp:TextBox> &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="EnglishWordsTextBox" runat="server" TextMode="MultiLine" Rows="10"></asp:TextBox>
     
     </p>

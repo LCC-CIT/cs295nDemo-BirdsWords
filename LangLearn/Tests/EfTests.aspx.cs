@@ -35,22 +35,14 @@ public partial class Tests_EfTests : System.Web.UI.Page
             #endregion
 
             #region delete an English object from the database
-            if (true)
+            if (false)
             {
                 // Delete the English word object (and it's Spanish word objects)
                 // Note that we have to delete the object retrieved from the db, not the new one we created above
-                English eWord = (from eng in entities.Englishes.Include("Spanishes") 
-                                 where eng.Word == "Fly" 
+                English eWord = (from eng in entities.Englishes.Include("SpanishWords") 
+                                 where eng.Word == "Good" 
                                  select eng).ToArray<English>()[0];
                 entities.Englishes.Remove(eWord);
-            }
-
-            if (false)
-            {
-                Spanish sWord = (from s in entities.Spanishes.Include("English")
-                                 where s.Word == "Ajo"
-                                 select s).FirstOrDefault<Spanish>();
-                entities.Spanishes.Remove(sWord);
             }
             #endregion
 
@@ -92,18 +84,16 @@ public partial class Tests_EfTests : System.Web.UI.Page
             // English to Spanish translation
             if (true)
             {
-                string englishWord = "Pear";
+                string englishWord = "Bird";
 
                 EnglishWordsTextBox.Text = englishWord;
 
                 var aSpanishWord = from s in entities.Spanishes
                                    where s.English.Word == englishWord
                                    select s.Word;
-                //string spanishWord = aSpanishWord.SingleOrDefault<String>();
-                //SpanishWordTextBox.Text = spanishWord;
-
-                foreach (string sWord in aSpanishWord)
-                    SpanishWordTextBox.Text += sWord + "\n\r";  
+                string spanishWord = aSpanishWord.SingleOrDefault<String>();
+                SpanishWordTextBox.Text = spanishWord;
+                
            }
             #endregion
         }
