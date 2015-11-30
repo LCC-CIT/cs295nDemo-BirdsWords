@@ -121,7 +121,7 @@ namespace LangLogic
                              select s).FirstOrDefault<Spanish>();
 
                 if (sWord != null &&                        // make sure we found a word for the random Id
-                    sWord.English.Picture != "")       // it needs to have a picture for our quizzes and games
+                    sWord.English.Picture != "" && sWord.English.Picture != null)       // it needs to have a picture for our quizzes and games
                 {
                     Lexeme lexeme = new Lexeme(sWord.Word, sWord.English.Picture, 
                         sWord.English.Word, sWord.English.PartOfSpeech);
