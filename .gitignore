@@ -23,6 +23,8 @@ $RECYCLE.BIN/
 
 [Oo]bj
 [Bb]in
+packages
+.vs
 *.user
 *.suo
 *.[Cc]ache
